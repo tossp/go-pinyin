@@ -150,6 +150,8 @@ func SinglePinyin(r rune, a Args) []string {
 		if !a.Heteronym {
 			pys = strings.Split(value, ",")[:1]
 		}
+	}else {
+		pys = append(pys, string(r))
 	}
 	return applyStyle(pys, a)
 }
